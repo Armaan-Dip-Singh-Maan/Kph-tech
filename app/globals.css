@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Design tokens from plan */
+  --header-bg: #FFFFFF;
+  --logo-kph: #6F2EDD;
+  --logo-tech: #333333;
+  --nav-links: #333333;
+  --hero-gradient-start: #E0F2F7;
+  --hero-gradient-end: #8B80F7;
+  --cta-gradient-start: #5E5BFF;
+  --cta-gradient-end: #AA33FF;
+  --value-prop-highlight: #3366FF;
+  --dark-section-start: #2C3A7A;
+  --dark-section-end: #192A56;
+  --footer-bg: #1a2b5b;
+  --footer-brand: #2575fc;
+  --section-gradient-start: #AF7BF5;
+  --section-gradient-end: #8BD7FA;
+  --partners-gradient-start: #E0BBE4;
+  --partners-gradient-end: #A0ECFF;
+  --contact-gradient-start: #3A6FF8;
+  --contact-gradient-end: #6B23C0;
+  --dotted-bg: #F8F8F8;
+  --dot-pattern: #5e627f;
+  --form-card-bg: #FFFFFF;
+  --form-border: #E0E0E0;
+  --input-bg: #F7F7F7;
+  --help-button-bg: #333333;
+  --heading-color: #202020;
+  --body-color: #666666;
+  --timeline-line: #CCCCCC;
+  --card-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  --footer-divider: #4a5b82;
+}
+
+@theme inline {
+  --color-header-bg: var(--header-bg);
+  --color-logo-kph: var(--logo-kph);
+  --color-logo-tech: var(--logo-tech);
+  --color-nav-links: var(--nav-links);
+  --color-value-prop-highlight: var(--value-prop-highlight);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-brand: var(--footer-brand);
+  --color-dotted-bg: var(--dotted-bg);
+  --color-dot-pattern: var(--dot-pattern);
+  --color-form-card-bg: var(--form-card-bg);
+  --color-form-border: var(--form-border);
+  --color-input-bg: var(--input-bg);
+  --color-help-button: var(--help-button-bg);
+  --color-heading: var(--heading-color);
+  --color-body: var(--body-color);
+  --color-timeline-line: var(--timeline-line);
+  --font-sans: 'Poppins', system-ui, sans-serif;
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--body-color);
+}
+
+/* Dotted pattern for services section */
+.bg-dotted {
+  background-color: var(--dotted-bg);
+  background-image: radial-gradient(circle, var(--dot-pattern) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
