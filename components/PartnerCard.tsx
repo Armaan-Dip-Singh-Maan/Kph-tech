@@ -1,4 +1,10 @@
-import type { PartnerItem } from "@/constants/partnersData";
+type PartnerItem = {
+  id: string;
+  name: string;
+  description?: string | null;
+  logoType: string;
+  accentColor?: string | null;
+};
 
 function TechConnectLogo({ accentColor }: { accentColor: string }) {
   return (

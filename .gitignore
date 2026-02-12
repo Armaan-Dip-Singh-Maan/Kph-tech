@@ -34,3 +34,10 @@ next-env.d.ts
 *.swp
 *.swo
 .DS_Store
+
+/app/generated/prisma
+
+# Database
+*.db
+dev.db
+prisma/dev.db

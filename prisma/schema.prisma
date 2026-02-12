@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model SiteConfig {
+  id                    String   @id @default("default")
+  heroHeadline          String   @default("Your Digital Transformation Partner")
+  heroSubtitle          String   @default("End-to-end IT managed services, strategic marketing solutions, and enterprise-grade development that drive measurable results")
+  heroCtaText           String   @default("Explore Our Services")
+  heroImageUrl          String?  @default("/hero-banner.jpg")
+  valuePropText         String   @default("KPH Tech provides")
+  valuePropHighlight    String   @default("Technology, Growth & Cloud Solutions")
+  valuePropSuffix       String   @default("Built for Modern Enterprises")
+  growthParagraph       String   @default("KPH Tech delivers solutions that not only accelerates your business growth but also ensures long-term sustainability and competitive advantage in the digital landscape.")
+  growthImageUrl        String?  @default("/section-2-growth.png")
+  contactHeadline       String   @default("Let's Build Something Extraordinary Together")
+  contactDescription    String   @default("Ready to accelerate your business transformation? Connect with our team to explore how we can help you achieve your strategic objectives.")
+  contactEmailLabel     String   @default("Email Us")
+  contactEmailAddress   String   @default("info@kphtech.com")
+  footerDescription     String   @default("Empowering business growth through enterprise-grade technology, strategic marketing, and innovative solutions.")
+  footerCopyright       String   @default("© 2026 KPH Tech. All rights reserved.")
+  privacyUrl             String?  @default("#")
+  termsUrl               String?  @default("#")
+  cookieUrl              String?  @default("#")
+  partnersHeadline       String   @default("At KPH Tech we have global teams working in different time zones which makes us 24*7 available for you")
+  partnersSectionTitle   String   @default("Our Global Partners")
+  servicesHeading        String   @default("Explore our services")
+  whyChooseHeading       String   @default("Why modern businesses choose KPH Tech")
+  updatedAt              DateTime @updatedAt
+}
+
+model NavLink {
+  id     String @id @default(cuid())
+  label  String
+  href   String
+  order  Int    @default(0)
+}
+
+model Service {
+  id           String   @id @default(cuid())
+  title        String
+  gradientFrom String
+  gradientTo   String
+  icon         String
+  imageUrl     String?
+  order        Int      @default(0)
+}
+
+model Feature {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  icon        String
+  side        String   // left | right
+  iconBg      String
+  iconColor   String
+  order       Int      @default(0)
+}
+
+model Partner {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  logoType    String   // techconnect | placeholder
+  accentColor String?
+  logoUrl     String?
+  order       Int      @default(0)
+}
+
+model FooterLink {
+  id         String   @id @default(cuid())
+  label      String
+  href       String
+  columnType String  // services | solutions | company
+  order      Int     @default(0)
+}
+
+model SocialLink {
+  id       String @id @default(cuid())
+  platform String // linkedin | twitter | facebook | instagram
+  url      String
+  order    Int    @default(0)
+}

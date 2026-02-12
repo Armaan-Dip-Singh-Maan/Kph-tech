@@ -1,5 +1,14 @@
 import { FeatureIcon } from "./icons/FeatureIcons";
-import type { FeatureItem } from "@/constants/featuresData";
+
+type FeatureItem = {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  side: string;
+  iconBg: string;
+  iconColor: string;
+};
 
 export default function FeatureCard({ feature }: { feature: FeatureItem }) {
   return (

@@ -4,6 +4,7 @@ export interface ServiceItem {
   gradientFrom: string;
   gradientTo: string;
   icon: string; // icon key for component
+  image?: string; // optional card image path (from public)
 }
 
 export const servicesData: ServiceItem[] = [
@@ -13,6 +14,7 @@ export const servicesData: ServiceItem[] = [
     gradientFrom: "#5f72ee",
     gradientTo: "#6c5ce7",
     icon: "marketing",
+    image: "/service-card-1-marketing.png",
   },
   {
     id: "design",
@@ -20,6 +22,7 @@ export const servicesData: ServiceItem[] = [
     gradientFrom: "#a770ef",
     gradientTo: "#cf75ed",
     icon: "design",
+    image: "/service-card-2-design.png",
   },
   {
     id: "web-mobile",
@@ -27,6 +30,7 @@ export const servicesData: ServiceItem[] = [
     gradientFrom: "#2afafc",
     gradientTo: "#4adeca",
     icon: "webmobile",
+    image: "/service-card-3-web-mobile.png",
   },
   {
     id: "cloud-transform",
@@ -34,6 +38,7 @@ export const servicesData: ServiceItem[] = [
     gradientFrom: "#6c5ce7",
     gradientTo: "#4e54c8",
     icon: "cloud",
+    image: "/service-card-4-cloud.png",
   },
   {
     id: "cloud-migration",

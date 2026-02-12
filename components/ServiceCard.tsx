@@ -1,7 +1,36 @@
+import Image from "next/image";
 import { ServiceIcon } from "./icons/ServiceIcons";
-import type { ServiceItem } from "@/constants/servicesData";
+
+type ServiceItem = {
+  id: string;
+  title: string;
+  gradientFrom: string;
+  gradientTo: string;
+  icon: string;
+  image?: string;
+};
 
 export default function ServiceCard({ service }: { service: ServiceItem }) {
+  if (service.image) {
+    return (
+      <div className="relative h-[260px] w-full overflow-hidden rounded-xl shadow-[0px_4px_10px_rgba(0,0,0,0.1)] transition hover:shadow-lg">
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+          <h3 className="text-center text-base font-bold leading-snug text-white drop-shadow-md md:text-lg">
+            {service.title}
+          </h3>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className="flex flex-col items-center justify-center rounded-xl p-8 shadow-[0px_4px_10px_rgba(0,0,0,0.1)] transition hover:shadow-lg md:p-10"
