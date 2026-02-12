@@ -93,6 +93,7 @@ async function main() {
         gradientFrom: "#38C4AF",
         gradientTo: "#64D4C4",
         icon: "migration",
+        imageUrl: "/service-card-5-cloud-migration.png",
         order: 4,
       },
       {
@@ -100,6 +101,7 @@ async function main() {
         gradientFrom: "#724CBE",
         gradientTo: "#8F6EBE",
         icon: "infrastructure",
+        imageUrl: "/service-card-6-infrastructure.png",
         order: 5,
       },
       {
@@ -107,6 +109,7 @@ async function main() {
         gradientFrom: "#386CB7",
         gradientTo: "#275A9C",
         icon: "security",
+        imageUrl: "/service-card-7-security-compliance.png",
         order: 6,
       },
       {
@@ -114,6 +117,7 @@ async function main() {
         gradientFrom: "#A087C9",
         gradientTo: "#8D7EA0",
         icon: "enterprise",
+        imageUrl: "/service-card-8-enterprise-security.png",
         order: 7,
       },
     ],

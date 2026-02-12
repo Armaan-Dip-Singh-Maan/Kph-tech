@@ -24,7 +24,7 @@ export default function ServicesSection({
         <h2 className="mb-12 text-center text-3xl font-bold text-[#333333] md:mb-16 md:text-4xl">
           {heading}
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

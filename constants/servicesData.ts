@@ -22,7 +22,7 @@ export const servicesData: ServiceItem[] = [
     gradientFrom: "#a770ef",
     gradientTo: "#cf75ed",
     icon: "design",
-    image: "/service-card-2-design.png",
+    image: "/Service_2_Banner.png",
   },
   {
     id: "web-mobile",
