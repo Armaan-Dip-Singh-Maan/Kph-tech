@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "KPH Tech | Your Digital Transformation Partner",
   description:
     "End-to-end IT managed services, strategic marketing solutions, and enterprise-grade development that drive measurable results.",
+  icons: {
+    icon: "/logo_KPH.png",
+  },
 };
 
 export default async function RootLayout({

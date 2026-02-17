@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 type NavLink = { id: string; label: string; href: string };
 
 const defaultNavLinks: NavLink[] = [
@@ -25,10 +27,16 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
             e.preventDefault();
             scrollTo("home");
           }}
-          className="flex items-center gap-0.5"
+          className="flex items-center"
         >
-          <span className="text-xl font-bold text-[#6F2EDD] md:text-2xl">KPH</span>
-          <span className="text-xl font-normal text-[#333333] md:text-2xl">Tech</span>
+          <Image
+            src="/logo_KPH.png"
+            alt="KPH Tech"
+            width={320}
+            height={90}
+            className="h-16 w-auto md:h-20 lg:h-24"
+            priority
+          />
         </a>
         <nav className="flex items-center gap-5 sm:gap-8 md:gap-10">
           {navLinks.map((link) => (

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type FooterLink = { id: string; label: string; href: string };
 type SocialLink = { id: string; platform: string; url: string };
 
@@ -66,7 +68,15 @@ export default function Footer({
       <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 lg:px-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="mb-3 text-lg font-bold text-[#2575fc]">KPH Tech</h3>
+            <a href="/" className="inline-block mb-3">
+              <Image
+                src="/logo_KPH.png"
+                alt="KPH Tech"
+                width={260}
+                height={72}
+                className="h-16 w-auto md:h-20"
+              />
+            </a>
             <p className="mb-4 max-w-xs text-sm leading-relaxed text-white/90">
               {description}
             </p>

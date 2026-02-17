@@ -15,16 +15,18 @@ export default function GrowthSection({
   const after = parts[1]?.trim() ?? "";
 
   return (
-    <section className="relative min-h-[70vh] w-full overflow-hidden bg-[#1A2B5B] py-24 md:min-h-[75vh] md:py-32">
+    <section className="relative w-full overflow-hidden bg-[#1A2B5B] min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh]">
       <div
-        className="absolute inset-0 bg-cover bg-right bg-no-repeat"
+        className="absolute inset-0 bg-no-repeat bg-center"
         style={{
           backgroundImage: `url('${imageUrl || "/section-2-growth.png"}')`,
+          backgroundSize: "100% auto",
+          backgroundPosition: "center center",
         }}
       />
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start px-6 md:flex-row md:items-center md:gap-16 md:px-10 lg:px-14">
+      <div className="relative z-10 mx-auto flex min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] max-w-7xl flex-col items-start justify-center py-12 pl-4 pr-6 md:flex-row md:items-center md:gap-16 md:py-16 md:pl-6 md:pr-10 lg:py-24 lg:pl-8 lg:pr-14">
         <div className="max-w-xl flex-1">
-          <p className="text-xl leading-relaxed text-white md:text-2xl lg:text-3xl">
+          <p className="leading-relaxed text-white text-[25px] md:text-[29px] lg:text-[35px]">
             {parts.length >= 2 ? (
               <>
                 {before}{" "}
