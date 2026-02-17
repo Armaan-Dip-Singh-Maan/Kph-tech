@@ -10,15 +10,20 @@ type ServiceItem = {
   image?: string;
 };
 
-export default function ServiceCard({ service }: { service: ServiceItem }) {
+type ServiceCardProps = { service: ServiceItem; imagePosition?: "center" | "left" };
+
+export default function ServiceCard({ service, imagePosition = "center" }: ServiceCardProps) {
   if (service.image) {
+    const positionClass = imagePosition === "left" ? "object-left" : "object-center";
+    const positionStyle = imagePosition === "left" ? { objectPosition: "35% center" } : undefined;
     return (
       <div className="relative h-[260px] w-full overflow-hidden rounded-xl shadow-[0px_4px_10px_rgba(0,0,0,0.1)] transition hover:shadow-lg">
         <Image
           src={service.image}
           alt={service.title}
           fill
-          className="object-cover"
+          className={`object-cover ${positionClass}`}
+          style={positionStyle}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

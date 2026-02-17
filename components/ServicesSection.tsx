@@ -25,8 +25,12 @@ export default function ServicesSection({
           {heading}
         </h2>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+          {services.map((service, index) => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+              imagePosition={index === 6 || index === 7 ? "left" : "center"}
+            />
           ))}
         </div>
       </div>

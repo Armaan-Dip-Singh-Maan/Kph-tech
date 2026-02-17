@@ -19,22 +19,22 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#FFFFFF] px-6 py-4 md:px-12 md:py-5 lg:px-14">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 h-16 w-full bg-[#FFFFFF] px-6 md:px-12 lg:px-14">
+      <div className="mx-auto flex h-full max-w-7xl flex-wrap items-center justify-between gap-4">
         <a
           href="#"
           onClick={(e) => {
             e.preventDefault();
             scrollTo("home");
           }}
-          className="flex items-center"
+          className="flex h-full items-center"
         >
           <Image
             src="/logo_KPH.png"
             alt="KPH Tech"
             width={320}
-            height={90}
-            className="h-16 w-auto md:h-20 lg:h-24"
+            height={56}
+            className="h-[56px] w-auto max-h-[56px] object-contain"
             priority
           />
         </a>

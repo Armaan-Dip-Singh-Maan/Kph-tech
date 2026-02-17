@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "End-to-end IT managed services, strategic marketing solutions, and enterprise-grade development that drive measurable results.",
   icons: {
-    icon: "/logo_KPH.png",
+    icon: "/favicon.png",
   },
 };
 
