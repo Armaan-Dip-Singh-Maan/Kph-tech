@@ -1,4 +1,4 @@
-import Image from "next/image";
+const LOGO_SRC = "/logo_computer-version.svg";
 
 type FooterLink = { id: string; label: string; href: string };
 type SocialLink = { id: string; platform: string; url: string };
@@ -64,17 +64,17 @@ export default function Footer({
   socialLinks = [],
 }: FooterProps) {
   return (
-    <footer className="w-full bg-[#1f3a8a] text-white">
+    <footer className="w-full bg-[#000034] text-white">
       <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 lg:px-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <a href="/" className="inline-block mb-3">
-              <Image
-                src="/logo_KPH.png"
+              <img
+                src={LOGO_SRC}
                 alt="KPH Tech"
-                width={260}
-                height={72}
-                className="h-16 w-auto md:h-20"
+                width={320}
+                height={88}
+                className="h-20 w-auto md:h-24"
               />
             </a>
             <p className="mb-4 max-w-xs text-sm leading-relaxed text-white/90">
@@ -125,7 +125,7 @@ export default function Footer({
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-[#4a5b82] pt-6">
+        <div className="mt-10 border-t border-white/20 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-white/80 md:flex-row">
             <span>{copyright}</span>
             <div className="flex gap-6">

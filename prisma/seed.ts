@@ -2,11 +2,11 @@ import "dotenv/config";
 import path from "path";
 import { PrismaClient } from "@prisma/client";
 
-// Use same DB as app (Prisma resolves file:./dev.db relative to prisma/)
+const dbUrl = process.env.DATABASE_URL;
 const dbPath = path.join(process.cwd(), "prisma", "dev.db");
-const prisma = new PrismaClient({
-  datasources: { db: { url: `file:${dbPath}` } },
-});
+const prisma = new PrismaClient(
+  dbUrl ? undefined : { datasources: { db: { url: `file:${dbPath}` } } }
+);
 
 async function main() {
   await prisma.siteConfig.upsert({

@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 
+const SERVICE_PLACEHOLDER = "Select a service";
 const serviceOptions = [
-  "Select a service",
+  SERVICE_PLACEHOLDER,
   "Marketing & Growth Solutions",
   "Design & Creative Services",
   "Web & Mobile Application Development",
@@ -19,7 +20,7 @@ export default function ContactForm() {
     fullName: "",
     email: "",
     company: "",
-    serviceInterest: "",
+    serviceInterest: SERVICE_PLACEHOLDER,
     message: "",
   });
 
@@ -81,6 +82,7 @@ export default function ContactForm() {
             value={formData.serviceInterest}
             onChange={(e) => setFormData((p) => ({ ...p, serviceInterest: e.target.value }))}
             className="w-full appearance-none rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#333333] focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
+            aria-label="Service Interest"
           >
             {serviceOptions.map((opt) => (
               <option key={opt} value={opt}>

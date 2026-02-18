@@ -21,8 +21,8 @@ export default async function RootLayout({
 }>) {
   const content = await getContent();
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased" suppressHydrationWarning>
         <Header navLinks={content.navLinks} />
         {children}
         <Footer

@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 type NavLink = { id: string; label: string; href: string };
 
 const defaultNavLinks: NavLink[] = [
@@ -19,7 +17,7 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
   };
 
   return (
-    <header className="sticky top-0 z-50 h-16 w-full bg-[#FFFFFF] px-6 md:px-12 lg:px-14">
+    <header className="sticky top-0 z-50 h-16 w-full overflow-hidden bg-[#FFFFFF] px-6 md:px-12 lg:px-14">
       <div className="mx-auto flex h-full max-w-7xl flex-wrap items-center justify-between gap-4">
         <a
           href="#"
@@ -27,15 +25,15 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
             e.preventDefault();
             scrollTo("home");
           }}
-          className="flex h-full items-center"
+          className="-ml-8 flex h-full items-center overflow-hidden md:-ml-10 lg:-ml-10"
         >
-          <Image
-            src="/logo_KPH.png"
+          <img
+            src="/logo_computer-version.svg"
             alt="KPH Tech"
-            width={320}
-            height={56}
-            className="h-[56px] w-auto max-h-[56px] object-contain"
-            priority
+            width={400}
+            height={80}
+            className="h-20 w-auto max-h-20 object-contain md:h-[72px] md:max-h-[72px]"
+            fetchPriority="high"
           />
         </a>
         <nav className="flex items-center gap-5 sm:gap-8 md:gap-10">
