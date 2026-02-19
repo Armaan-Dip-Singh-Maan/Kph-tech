@@ -74,7 +74,7 @@ export default function ServiceCard({ service, imagePosition = "center", customB
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <h3 className="text-center text-base font-bold leading-snug text-white drop-shadow-md md:text-lg">
+              <h3 className="text-center text-base font-bold leading-snug text-white md:text-lg">
                 {service.title}
               </h3>
             </div>
