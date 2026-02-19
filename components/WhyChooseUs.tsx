@@ -22,9 +22,9 @@ export default function WhyChooseUs({
   return (
     <section
       id="about"
-      className="w-full py-16 md:py-24"
+      className="w-full py-16 md:py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        background: "linear-gradient(to right, #AF7BF5, #B2A2F8 40%, #8BD7FA 100%)",
+        backgroundImage: "url('/assets/why-choose-bg.png')",
       }}
     >
       <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-14">

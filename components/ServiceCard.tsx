@@ -18,6 +18,7 @@ type ServiceCardProps = {
   imagePosition?: "center" | "left";
   customBullets?: string[];
   isTall?: boolean;
+  imageOffsetTop?: number;
 };
 
 function RevealPanel({
@@ -50,7 +51,7 @@ function RevealPanel({
 const DEFAULT_CARD_HEIGHT = "260px";
 const TALL_CARD_HEIGHT = "480px";
 
-export default function ServiceCard({ service, imagePosition = "center", customBullets, isTall = false }: ServiceCardProps) {
+export default function ServiceCard({ service, imagePosition = "center", customBullets, isTall = false, imageOffsetTop = 0 }: ServiceCardProps) {
   const cardHeight = isTall ? TALL_CARD_HEIGHT : DEFAULT_CARD_HEIGHT;
 
   if (service.image) {
@@ -64,17 +65,17 @@ export default function ServiceCard({ service, imagePosition = "center", customB
           <RevealPanel title={service.title} textColor={service.gradientFrom} bullets={customBullets} />
         </div>
         {/* Front: image + title — swipes up on hover */}
-        <div className="absolute inset-0 z-10 transition-transform duration-300 ease-out delay-0 group-hover:delay-300 group-hover:-translate-y-full flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent">
-          <div className="relative w-full h-full flex items-center justify-center">
+        <div className="absolute inset-0 z-10 transition-transform duration-300 ease-out delay-0 group-hover:delay-300 group-hover:-translate-y-full flex items-center justify-center">
+          <div className="relative w-full h-full flex items-center justify-center" style={{ transform: imageOffsetTop ? `translateY(-${imageOffsetTop}px)` : undefined }}>
             <Image
               src={service.image}
               alt={service.title}
               fill
-              className="object-contain"
+              className="object-cover scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <h3 className="text-center text-base font-bold leading-snug text-white md:text-lg">
+              <h3 className="text-center text-base font-bold leading-snug text-white drop-shadow-lg md:text-lg">
                 {service.title}
               </h3>
             </div>
@@ -89,7 +90,7 @@ export default function ServiceCard({ service, imagePosition = "center", customB
       className="group relative w-full overflow-hidden rounded-xl shadow-[0px_4px_10px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-lg"
       style={{
         minHeight: cardHeight,
-        background: `linear-gradient(to bottom, ${service.gradientFrom}, ${service.gradientTo})`,
+        background: service.gradientFrom,
       }}
     >
       {/* Reveal panel: white bg, card color for text — only visible on hover */}

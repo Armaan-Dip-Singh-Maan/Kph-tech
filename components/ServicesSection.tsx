@@ -44,6 +44,7 @@ export default function ServicesSection({
                 imagePosition={index === 6 || index === 7 ? "left" : "center"}
                 customBullets={index === 0 ? FIRST_CARD_BULLETS : undefined}
                 isTall={index === 0 || index >= 4}
+                imageOffsetTop={service.title === "Enterprise Security Architecture & Technical Assessments" ? 4 : 0}
               />
             ))}
           </div>
