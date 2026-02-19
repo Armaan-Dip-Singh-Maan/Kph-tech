@@ -17,7 +17,7 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
   };
 
   return (
-    <header className="sticky top-0 z-50 h-16 w-full overflow-hidden bg-[#FFFFFF] px-6 md:px-12 lg:px-14">
+    <header className="sticky top-0 z-50 h-25 w-full overflow-hidden bg-[#FFFFFF] px-6 md:px-12 lg:px-14">
       <div className="mx-auto flex h-full max-w-7xl flex-wrap items-center justify-between gap-4">
         <a
           href="#"
@@ -28,11 +28,11 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
           className="-ml-8 flex h-full items-center overflow-hidden md:-ml-10 lg:-ml-10"
         >
           <img
-            src="/logo_computer-version.svg"
+            src="/assets/Logo.png"
             alt="KPH Tech"
-            width={400}
-            height={80}
-            className="h-20 w-auto max-h-20 object-contain md:h-[72px] md:max-h-[72px]"
+            width={240}
+            height={100}
+            className="h-20 w-auto max-h-20 object-contain md:h-25 md:max-h-[8rem]"
             fetchPriority="high"
           />
         </a>

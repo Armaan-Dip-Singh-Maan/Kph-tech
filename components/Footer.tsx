@@ -1,4 +1,4 @@
-const LOGO_SRC = "/logo_computer-version.svg";
+const LOGO_SRC = "/assets/Logo.png";
 
 type FooterLink = { id: string; label: string; href: string };
 type SocialLink = { id: string; platform: string; url: string };
@@ -73,8 +73,8 @@ export default function Footer({
                 src={LOGO_SRC}
                 alt="KPH Tech"
                 width={320}
-                height={88}
-                className="h-20 w-auto md:h-24"
+                height={112}
+                className="h-24 w-auto md:h-28"
               />
             </a>
             <p className="mb-4 max-w-xs text-sm leading-relaxed text-white/90">

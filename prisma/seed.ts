@@ -18,13 +18,13 @@ async function main() {
       heroSubtitle:
         "End-to-end IT managed services, strategic marketing solutions, and enterprise-grade development that drive measurable results",
       heroCtaText: "Explore Our Services",
-      heroImageUrl: "/hero-banner.jpg",
+      heroImageUrl: "/assets/Hero_Banner.png",
       valuePropText: "KPH Tech provides",
       valuePropHighlight: "Technology, Growth & Cloud Solutions",
       valuePropSuffix: "Built for Modern Enterprises",
       growthParagraph:
         "KPH Tech delivers solutions that not only accelerates your business growth but also ensures long-term sustainability and competitive advantage in the digital landscape.",
-      growthImageUrl: "/section-2-growth.png",
+      growthImageUrl: "/assets/Section_2_banner.png",
       contactHeadline: "Let's Build Something Extraordinary Together",
       contactDescription:
         "Ready to accelerate your business transformation? Connect with our team to explore how we can help you achieve your strategic objectives.",
@@ -61,7 +61,7 @@ async function main() {
         gradientFrom: "#5f72ee",
         gradientTo: "#6c5ce7",
         icon: "marketing",
-        imageUrl: "/service-card-1-marketing.png",
+        imageUrl: "/assets/service-card-1-marketing.png",
         order: 0,
       },
       {
@@ -69,7 +69,7 @@ async function main() {
         gradientFrom: "#a770ef",
         gradientTo: "#cf75ed",
         icon: "design",
-        imageUrl: "/service-card-2-design.png",
+        imageUrl: "/assets/service-card-2-design.png",
         order: 1,
       },
       {
@@ -77,7 +77,7 @@ async function main() {
         gradientFrom: "#2afafc",
         gradientTo: "#4adeca",
         icon: "webmobile",
-        imageUrl: "/service-card-3-web-mobile.png",
+        imageUrl: "/assets/service-card-3-web-mobile.png",
         order: 2,
       },
       {
@@ -85,7 +85,7 @@ async function main() {
         gradientFrom: "#6c5ce7",
         gradientTo: "#4e54c8",
         icon: "cloud",
-        imageUrl: "/service-card-4-cloud.png",
+        imageUrl: "/assets/service-card-4-cloud.png",
         order: 3,
       },
       {
@@ -93,7 +93,7 @@ async function main() {
         gradientFrom: "#38C4AF",
         gradientTo: "#64D4C4",
         icon: "migration",
-        imageUrl: "/service-card-5-cloud-migration.png",
+        imageUrl: "/assets/service-card-5-cloud-migration.png",
         order: 4,
       },
       {
@@ -101,7 +101,7 @@ async function main() {
         gradientFrom: "#724CBE",
         gradientTo: "#8F6EBE",
         icon: "infrastructure",
-        imageUrl: "/service-card-6-infrastructure.png",
+        imageUrl: "/assets/service-card-6-infrastructure.png",
         order: 5,
       },
       {
@@ -109,7 +109,7 @@ async function main() {
         gradientFrom: "#386CB7",
         gradientTo: "#275A9C",
         icon: "security",
-        imageUrl: "/service-card-7-security-compliance.png",
+        imageUrl: "/assets/service-card-7-security-compliance.png",
         order: 6,
       },
       {
@@ -117,7 +117,7 @@ async function main() {
         gradientFrom: "#A087C9",
         gradientTo: "#8D7EA0",
         icon: "enterprise",
-        imageUrl: "/service-card-8-enterprise-security.png",
+        imageUrl: "/assets/service-card-8-enterprise-security.png",
         order: 7,
       },
     ],

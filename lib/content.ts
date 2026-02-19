@@ -3,14 +3,14 @@ import { prisma } from "./prisma";
 
 // Fallback when DB is missing or fails (e.g. Vercel without database) – exported for use in page if needed
 export const fallbackServices = [
-  { id: "f1", title: "Marketing & Growth Solutions", gradientFrom: "#5f72ee", gradientTo: "#6c5ce7", icon: "marketing", image: "/service-card-1-marketing.png" },
-  { id: "f2", title: "Design & Creative Services", gradientFrom: "#a770ef", gradientTo: "#cf75ed", icon: "design", image: "/service-card-2-design.png" },
-  { id: "f3", title: "Web & Mobile Application Development", gradientFrom: "#2afafc", gradientTo: "#4adeca", icon: "webmobile", image: "/service-card-3-web-mobile.png" },
-  { id: "f4", title: "Cloud Transformation & Platform Engineering", gradientFrom: "#6c5ce7", gradientTo: "#4e54c8", icon: "cloud", image: "/service-card-4-cloud.png" },
-  { id: "f5", title: "Cloud Migration & Data/AI Transformation", gradientFrom: "#38C4AF", gradientTo: "#64D4C4", icon: "migration", image: "/service-card-5-cloud-migration.png" },
-  { id: "f6", title: "Infrastructure Virtualization & Modernization", gradientFrom: "#724CBE", gradientTo: "#8F6EBE", icon: "infrastructure", image: "/service-card-6-infrastructure.png" },
-  { id: "f7", title: "Security & Compliance", gradientFrom: "#386CB7", gradientTo: "#275A9C", icon: "security", image: "/service-card-7-security-compliance.png" },
-  { id: "f8", title: "Enterprise Security Architecture & Technical Assessments", gradientFrom: "#A087C9", gradientTo: "#8D7EA0", icon: "enterprise", image: "/service-card-8-enterprise-security.png" },
+  { id: "f1", title: "Marketing & Growth Solutions", gradientFrom: "#5f72ee", gradientTo: "#6c5ce7", icon: "marketing", image: "/assets/service-card-1-marketing.png" },
+  { id: "f2", title: "Design & Creative Services", gradientFrom: "#a770ef", gradientTo: "#cf75ed", icon: "design", image: "/assets/service-card-2-design.png" },
+  { id: "f3", title: "Web & Mobile Application Development", gradientFrom: "#2afafc", gradientTo: "#4adeca", icon: "webmobile", image: "/assets/service-card-3-web-mobile.png" },
+  { id: "f4", title: "Cloud Transformation & Platform Engineering", gradientFrom: "#6c5ce7", gradientTo: "#4e54c8", icon: "cloud", image: "/assets/service-card-4-cloud.png" },
+  { id: "f5", title: "Cloud Migration & Data/AI Transformation", gradientFrom: "#38C4AF", gradientTo: "#64D4C4", icon: "migration", image: "/assets/service-card-5-cloud-migration.png" },
+  { id: "f6", title: "Infrastructure Virtualization & Modernization", gradientFrom: "#724CBE", gradientTo: "#8F6EBE", icon: "infrastructure", image: "/assets/service-card-6-infrastructure.png" },
+  { id: "f7", title: "Security & Compliance", gradientFrom: "#386CB7", gradientTo: "#275A9C", icon: "security", image: "/assets/service-card-7-security-compliance.png" },
+  { id: "f8", title: "Enterprise Security Architecture & Technical Assessments", gradientFrom: "#A087C9", gradientTo: "#8D7EA0", icon: "enterprise", image: "/assets/service-card-8-enterprise-security.png" },
 ];
 
 export const fallbackFeatures = [
@@ -60,12 +60,12 @@ const fallbackSiteConfig = {
   heroHeadline: "Your Digital Transformation Partner",
   heroSubtitle: "End-to-end IT managed services, strategic marketing solutions, and enterprise-grade development that drive measurable results",
   heroCtaText: "Explore Our Services",
-  heroImageUrl: "/hero-banner.jpg",
+  heroImageUrl: "/assets/Hero_Banner.png",
   valuePropText: "KPH Tech provides",
   valuePropHighlight: "Technology, Growth & Cloud Solutions",
   valuePropSuffix: "Built for Modern Enterprises",
   growthParagraph: "KPH Tech delivers solutions that not only accelerates your business growth but also ensures long-term sustainability and competitive advantage in the digital landscape.",
-  growthImageUrl: "/section-2-growth.png",
+  growthImageUrl: "/assets/Section_2_banner.png",
   contactHeadline: "Let's Build Something Extraordinary Together",
   contactDescription: "Ready to accelerate your business transformation? Connect with our team to explore how we can help you achieve your strategic objectives.",
   contactEmailLabel: "Email Us",
