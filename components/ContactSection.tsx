@@ -22,9 +22,9 @@ export default function ContactSection({
   return (
     <section
       id="contact"
-      className="w-full py-16 md:py-24"
+      className="w-full py-16 md:py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        background: "linear-gradient(to right, #3A6FF8, #6B23C0)",
+        backgroundImage: "url('/assets/contact-form-banner.png')",
       }}
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-6 md:flex-row md:items-center md:gap-16 md:px-10 lg:px-14">

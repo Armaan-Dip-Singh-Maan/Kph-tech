@@ -30,7 +30,13 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="rounded-2xl border border-[#E0E0E0] bg-white p-8 shadow-lg md:p-10">
+    <div 
+      className="rounded-2xl border border-[#E0E0E0] p-8 shadow-lg md:p-10 bg-cover bg-center bg-no-repeat relative"
+      style={{
+        backgroundImage: "url('/assets/contact-form-banner.png')",
+      }}
+    >
+      <div className="relative z-10">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="fullName" className="mb-1 block text-sm font-medium text-[#333333]">
@@ -118,6 +124,7 @@ export default function ContactForm() {
           </svg>
         </button>
       </form>
+      </div>
     </div>
   );
 }
