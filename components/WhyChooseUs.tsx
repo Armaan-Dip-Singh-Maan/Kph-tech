@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import FeatureCard from "./FeatureCard";
 
 type FeatureItem = {
@@ -9,6 +12,56 @@ type FeatureItem = {
   iconBg: string;
   iconColor: string;
 };
+
+function AnimatedFeatureRow({ feature }: { feature: FeatureItem }) {
+  const rowRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = rowRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const slideInClass = inView
+    ? "translate-x-0 opacity-100"
+    : feature.side === "left"
+      ? "-translate-x-full opacity-0"
+      : "translate-x-full opacity-0";
+
+  return (
+    <div ref={rowRef} className="relative flex flex-col md:flex-row md:items-center">
+      {feature.side === "left" ? (
+        <>
+          <div
+            className={`w-full md:w-1/2 md:pr-10 md:text-right transition-all duration-700 ease-out ${slideInClass}`}
+          >
+            <div className="ml-0 md:ml-auto md:inline-block">
+              <FeatureCard feature={feature} />
+            </div>
+          </div>
+          <div className="hidden w-1/2 md:block" />
+        </>
+      ) : (
+        <>
+          <div className="hidden w-1/2 md:block" />
+          <div
+            className={`w-full md:w-1/2 md:pl-10 transition-all duration-700 ease-out ${slideInClass}`}
+          >
+            <FeatureCard feature={feature} />
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
 interface WhyChooseUsProps {
   heading?: string | null;
@@ -35,25 +88,7 @@ export default function WhyChooseUs({
           <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-px bg-[#DDDDDD] md:block" />
           <div className="space-y-12 md:space-y-16">
             {features.map((feature) => (
-              <div key={feature.id} className="relative flex flex-col md:flex-row md:items-center">
-                {feature.side === "left" ? (
-                  <>
-                    <div className="w-full md:w-1/2 md:pr-10 md:text-right">
-                      <div className="ml-0 md:ml-auto md:inline-block">
-                        <FeatureCard feature={feature} />
-                      </div>
-                    </div>
-                    <div className="hidden w-1/2 md:block" />
-                  </>
-                ) : (
-                  <>
-                    <div className="hidden w-1/2 md:block" />
-                    <div className="w-full md:w-1/2 md:pl-10">
-                      <FeatureCard feature={feature} />
-                    </div>
-                  </>
-                )}
-              </div>
+              <AnimatedFeatureRow key={feature.id} feature={feature} />
             ))}
           </div>
         </div>

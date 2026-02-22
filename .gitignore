@@ -3,11 +3,6 @@ node_modules
 .pnp
 .pnp.js
 
-# Build
-.next
-out
-build
-dist
 
 # Debug
 npm-debug.log*

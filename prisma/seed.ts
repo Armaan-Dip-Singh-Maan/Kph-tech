@@ -11,13 +11,15 @@ const prisma = new PrismaClient(
 async function main() {
   await prisma.siteConfig.upsert({
     where: { id: "default" },
-    update: {},
+    update: {
+      servicesHeading: "Our Services",
+    },
     create: {
       id: "default",
       heroHeadline: "Your Digital Transformation Partner",
       heroSubtitle:
         "End-to-end IT managed services, strategic marketing solutions, and enterprise-grade development that drive measurable results",
-      heroCtaText: "Explore Our Services",
+      heroCtaText: "Our Services",
       heroImageUrl: "/assets/Hero_Banner.png",
       valuePropText: "KPH Tech provides",
       valuePropHighlight: "Technology, Growth & Cloud Solutions",
@@ -39,7 +41,7 @@ async function main() {
       partnersHeadline:
         "At KPH Tech we have global teams working in different time zones which makes us 24*7 available for you",
       partnersSectionTitle: "Our Global Partners",
-      servicesHeading: "Explore our services",
+      servicesHeading: "Our Services",
       whyChooseHeading: "Why modern businesses choose KPH Tech",
     },
   });

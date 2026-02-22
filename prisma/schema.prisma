@@ -29,7 +29,7 @@ model SiteConfig {
   cookieUrl              String?  @default("#")
   partnersHeadline       String   @default("At KPH Tech we have global teams working in different time zones which makes us 24*7 available for you")
   partnersSectionTitle   String   @default("Our Global Partners")
-  servicesHeading        String   @default("Explore our services")
+  servicesHeading        String   @default("Our Services")
   whyChooseHeading       String   @default("Why modern businesses choose KPH Tech")
   updatedAt              DateTime @updatedAt
 }

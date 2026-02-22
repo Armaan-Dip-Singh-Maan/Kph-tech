@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import HelpButton from "@/components/HelpButton";
+import ContactStickyButton from "@/components/ContactStickyButton";
+import BackToTopButton from "@/components/BackToTopButton";
 import { getContent } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -36,7 +37,8 @@ export default async function RootLayout({
           company={content.footer.company}
           socialLinks={content.socialLinks}
         />
-        <HelpButton />
+        <ContactStickyButton />
+        <BackToTopButton />
       </body>
     </html>
   );

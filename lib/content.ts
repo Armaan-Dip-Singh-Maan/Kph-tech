@@ -49,7 +49,7 @@ const fallbackFooterLinks = {
 };
 
 const fallbackSocialLinks = [
-  { id: "s1", platform: "linkedin", url: "https://linkedin.com" },
+  { id: "s1", platform: "linkedin", url: "https://www.linkedin.com/company/kph-tech/" },
   { id: "s2", platform: "twitter", url: "https://twitter.com" },
   { id: "s3", platform: "facebook", url: "https://facebook.com" },
   { id: "s4", platform: "instagram", url: "https://instagram.com" },
@@ -77,7 +77,7 @@ const fallbackSiteConfig = {
   cookieUrl: "#",
   partnersHeadline: "At KPH Tech we have global teams working in different time zones which makes us 24*7 available for you",
   partnersSectionTitle: "Our Global Partners",
-  servicesHeading: "Explore our services",
+  servicesHeading: "Our Services",
   whyChooseHeading: "Why modern businesses choose KPH Tech",
 };
 

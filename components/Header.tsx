@@ -17,7 +17,7 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
   };
 
   return (
-    <header className="sticky top-0 z-50 h-25 w-full overflow-hidden bg-[#FFFFFF] px-6 md:px-12 lg:px-14">
+    <header className="top-0 z-50 h-25 w-full overflow-hidden bg-[#FFFFFF] px-6 md:px-12 lg:px-14">
       <div className="mx-auto flex h-full max-w-7xl flex-wrap items-center justify-between gap-4">
         <a
           href="#"

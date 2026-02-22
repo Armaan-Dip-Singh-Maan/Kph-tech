@@ -32,15 +32,15 @@ function RevealPanel({
 }) {
   return (
     <div className="flex flex-col justify-center bg-white p-6 md:p-8" style={{ color: textColor }}>
-      <h3 className="mb-3 text-center text-base font-bold leading-snug md:text-lg">{title}</h3>
+      <h3 className="mb-3 text-center text-[19px] font-bold leading-snug md:text-[21px]">{title}</h3>
       {bullets && bullets.length > 0 ? (
-        <ul className="list-inside list-disc space-y-1.5 text-left text-sm font-bold md:text-base" style={{ color: textColor }}>
+        <ul className="list-inside list-disc space-y-1.5 text-left font-sans font-bold text-[17px] md:text-[19px]" style={{ color: textColor }}>
           {bullets.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </ul>
       ) : (
-        <p className="text-center text-sm leading-relaxed opacity-90 md:text-base" style={{ color: textColor }}>
+        <p className="text-center font-sans leading-relaxed opacity-90 text-[17px] md:text-[19px]" style={{ color: textColor }}>
           {CARD_DESCRIPTION}
         </p>
       )}
@@ -75,7 +75,7 @@ export default function ServiceCard({ service, imagePosition = "center", customB
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <h3 className="text-center text-base font-bold leading-snug text-white drop-shadow-lg md:text-lg">
+              <h3 className="text-center text-[19px] font-bold leading-snug text-white drop-shadow-lg md:text-[21px]">
                 {service.title}
               </h3>
             </div>
@@ -102,7 +102,7 @@ export default function ServiceCard({ service, imagePosition = "center", customB
         <div className="text-white/90 [&_svg]:text-white">
           <ServiceIcon name={service.icon} />
         </div>
-        <h3 className="mt-4 text-center text-base font-bold leading-snug text-white md:text-lg">
+        <h3 className="mt-4 text-center text-[19px] font-bold leading-snug text-white md:text-[21px]">
           {service.title}
         </h3>
       </div>

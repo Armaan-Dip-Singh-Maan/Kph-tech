@@ -21,7 +21,7 @@ export default function GlobalPartners({
   partners = [],
 }: GlobalPartnersProps) {
   return (
-    <section className="w-full">
+    <section id="partners" className="w-full">
       <div className="w-full bg-[#F8F8F8] py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-6 text-center md:px-10">
           <p className="text-2xl font-bold leading-snug text-[#333333] md:text-3xl lg:text-4xl">

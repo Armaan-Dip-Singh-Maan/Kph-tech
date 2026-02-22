@@ -14,7 +14,7 @@ export const servicesData: ServiceItem[] = [
     gradientFrom: "#5f72ee",
     gradientTo: "#6c5ce7",
     icon: "marketing",
-    image: "/service-card-1-marketing.png",
+    image: "",
   },
   {
     id: "design",

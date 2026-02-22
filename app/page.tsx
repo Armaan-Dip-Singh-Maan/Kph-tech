@@ -32,7 +32,7 @@ export default async function Home() {
         imageUrl={c?.growthImageUrl}
       />
       <ServicesSection
-        heading={content.siteConfig?.servicesHeading ?? "Explore our services"}
+        heading={content.siteConfig?.servicesHeading ?? "Our Services"}
         services={services}
       />
       <WhyChooseUs
