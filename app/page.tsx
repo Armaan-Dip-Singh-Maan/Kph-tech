@@ -7,6 +7,8 @@ import GlobalPartners from "@/components/GlobalPartners";
 import ContactSection from "@/components/ContactSection";
 import { getContent, fallbackServices, fallbackFeatures, fallbackPartners } from "@/lib/content";
 
+export const revalidate = 300;
+
 export default async function Home() {
   const content = await getContent();
   const c = content.siteConfig;
@@ -52,4 +54,6 @@ export default async function Home() {
       />
     </main>
   );
+  
 }
+
