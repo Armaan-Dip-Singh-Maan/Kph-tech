@@ -39,7 +39,7 @@ export default function ContactForm() {
       <div className="relative z-10">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="fullName" className="mb-1 block text-sm font-medium text-[#333333]">
+          <label htmlFor="fullName" className="mb-1 block text-sm font-medium text-[#000000]">
             Full Name *
           </label>
           <input
@@ -49,11 +49,11 @@ export default function ContactForm() {
             placeholder="John Doe"
             value={formData.fullName}
             onChange={(e) => setFormData((p) => ({ ...p, fullName: e.target.value }))}
-            className="w-full rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#333333] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
+            className="w-full rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#000000] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-medium text-[#333333]">
+          <label htmlFor="email" className="mb-1 block text-sm font-medium text-[#000000]">
             Email Address *
           </label>
           <input
@@ -63,11 +63,11 @@ export default function ContactForm() {
             placeholder="john@company.com"
             value={formData.email}
             onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
-            className="w-full rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#333333] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
+            className="w-full rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#000000] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
           />
         </div>
         <div>
-          <label htmlFor="company" className="mb-1 block text-sm font-medium text-[#333333]">
+          <label htmlFor="company" className="mb-1 block text-sm font-medium text-[#000000]">
             Company
           </label>
           <input
@@ -76,18 +76,18 @@ export default function ContactForm() {
             placeholder="Your Company Name"
             value={formData.company}
             onChange={(e) => setFormData((p) => ({ ...p, company: e.target.value }))}
-            className="w-full rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#333333] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
+            className="w-full rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#000000] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
           />
         </div>
         <div>
-          <label htmlFor="serviceInterest" className="mb-1 block text-sm font-medium text-[#333333]">
+          <label htmlFor="serviceInterest" className="mb-1 block text-sm font-medium text-[#000000]">
             Service Interest
           </label>
           <select
             id="serviceInterest"
             value={formData.serviceInterest}
             onChange={(e) => setFormData((p) => ({ ...p, serviceInterest: e.target.value }))}
-            className="w-full appearance-none rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#333333] focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
+            className="w-full appearance-none rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#000000] focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
             aria-label="Service Interest"
           >
             {serviceOptions.map((opt) => (
@@ -98,7 +98,7 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="message" className="mb-1 block text-sm font-medium text-[#333333]">
+          <label htmlFor="message" className="mb-1 block text-sm font-medium text-[#000000]">
             Message *
           </label>
           <textarea
@@ -108,7 +108,7 @@ export default function ContactForm() {
             placeholder="Tell us about your project or needs..."
             value={formData.message}
             onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
-            className="w-full resize-none rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#333333] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
+            className="w-full resize-none rounded-lg border border-[#E0E0E0] bg-[#F7F7F7] px-4 py-3 text-[#000000] placeholder:text-gray-400 focus:border-[#5E5BFF] focus:outline-none focus:ring-1 focus:ring-[#5E5BFF]"
           />
         </div>
         <button

@@ -42,7 +42,7 @@ export default function Header({ navLinks = defaultNavLinks }: { navLinks?: NavL
               key={link.id}
               type="button"
               onClick={() => scrollTo(link.href)}
-              className="text-sm font-normal text-[#333333] transition hover:opacity-80 md:text-base"
+              className="text-sm font-normal text-[#000000] transition hover:opacity-80 md:text-base"
             >
               {link.label}
             </button>

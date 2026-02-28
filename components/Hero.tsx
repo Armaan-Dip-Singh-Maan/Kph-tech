@@ -66,7 +66,7 @@ export default function Hero({
           <h1 className="max-w-3xl text-4xl font-bold leading-tight text-[#202020] md:text-5xl lg:text-6xl">
             {headline}
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#666666] md:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#000000] md:text-lg">
             {subtitle}
           </p>
           <button

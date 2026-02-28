@@ -19,7 +19,7 @@ export default function FeatureCard({ feature }: { feature: FeatureItem }) {
       >
         <FeatureIcon name={feature.icon} bg={feature.iconBg} color={feature.iconColor} />
       </div>
-      <h3 className="text-lg font-bold text-[#333333] md:text-xl">{feature.title}</h3>
+      <h3 className="text-lg font-bold text-[#000000] md:text-xl">{feature.title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-[#696969] md:text-base">{feature.description}</p>
     </div>
   );

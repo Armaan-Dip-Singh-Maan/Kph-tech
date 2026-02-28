@@ -16,7 +16,7 @@ export default function ValueProposition({
   return (
     <section className="w-full bg-white py-16 md:py-20">
       <div className="mx-auto max-w-5xl px-6 text-center md:px-10 lg:px-14">
-        <p className="text-2xl font-bold leading-snug text-[#333333] md:text-3xl lg:text-4xl">
+        <p className="text-2xl font-bold leading-snug text-[#000000] md:text-3xl lg:text-4xl">
           {text}{" "}
           <span className="text-[#3366FF]">{highlight}</span> {suffix}
         </p>

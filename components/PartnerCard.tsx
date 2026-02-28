@@ -41,9 +41,9 @@ export default function PartnerCard({ partner }: { partner: PartnerItem }) {
         </>
       ) : (
         <>
-          <h3 className="text-xl font-bold text-[#333333]">{partner.name}</h3>
+          <h3 className="text-xl font-bold text-[#000000]">{partner.name}</h3>
           {partner.description && (
-            <p className="mt-2 text-center text-sm text-[#666666]">{partner.description}</p>
+            <p className="mt-2 text-center text-sm text-[#000000]">{partner.description}</p>
           )}
         </>
       )}

@@ -5,8 +5,8 @@
   /* Design tokens from plan */
   --header-bg: #FFFFFF;
   --logo-kph: #6F2EDD;
-  --logo-tech: #333333;
-  --nav-links: #333333;
+  --logo-tech: #000000;
+  --nav-links: #000000;
   --hero-gradient-start: #E0F2F7;
   --hero-gradient-end: #8B80F7;
   --cta-gradient-start: #5E5BFF;
@@ -27,9 +27,9 @@
   --form-card-bg: #FFFFFF;
   --form-border: #E0E0E0;
   --input-bg: #F7F7F7;
-  --help-button-bg: #333333;
+  --help-button-bg: #000000;
   --heading-color: #202020;
-  --body-color: #666666;
+  --body-color: #000000;
   --timeline-line: #CCCCCC;
   --card-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   --footer-divider: #4a5b82;
